@@ -19,7 +19,7 @@ export default defineConfig({
     lib: {
       entry: path.join(__dirname, "src/index.ts"),
       name: "cookkit",
-      formats: ["es", "cjs", "umd"],
+      formats: ["es", "umd"],
       fileName: (format) => `cookkit.${format}.js`,
     },
   },
