@@ -16,11 +16,18 @@ export default defineConfig({
     }),
   ],
   build: {
+    minify: true,
     lib: {
       entry: path.join(__dirname, "src/index.ts"),
       name: "cookkit",
       formats: ["es", "umd"],
       fileName: (format) => `cookkit.${format}.js`,
     },
+    rollupOptions: {
+      output: {
+        compact: true,
+      },
+      treeshake: true
+    }
   },
 });
