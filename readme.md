@@ -1,1 +1,1 @@
-![Banner](/.github/img/header.png)
+![Banner](https://cdn.jsdelivr.net/gh/bravinta/cookkit@main/.github/img/header.png)
