@@ -1,14 +1,16 @@
-import { ICookieOption } from "./types";
+import { ICookie, ICookieCategory } from "./types";
 
 class Cookkit {
-  private options: ICookieOption[]
+  private categories: ICookieCategory[]
+  private cookies: ICookie[]
 
-  constructor(options: ICookieOption[]) {
-    this.options = options
+  constructor(cookies: ICookie[], categories: ICookieCategory[]) {
+    this.categories = categories
+    this.cookies = cookies
   }
 
-  public get() {
-    return this.options
+  public getCategories() {
+    return this.categories
   }
 }
 
