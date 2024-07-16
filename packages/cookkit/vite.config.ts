@@ -17,6 +17,7 @@ export default defineConfig({
   ],
   build: {
     minify: true,
+    
     lib: {
       entry: path.join(__dirname, "src/index.ts"),
       name: "cookkit",
@@ -28,6 +29,6 @@ export default defineConfig({
         compact: true,
       },
       treeshake: true
-    }
+    },
   },
 });

@@ -1,0 +1,56 @@
+{
+  "name": "cookkit",
+  "version": "0.0.7",
+  "type": "module",
+  "author": "bravinta",
+  "license": "GPL-3.0-only",
+  "size-limit": [
+    {
+      "path": "dist/cookkit.*.js"
+    }
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/cookkit.es.js",
+      "require": "./dist/cookkit.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/cookkit.umd.js",
+  "module": "./dist/cookkit.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bravinta/cookkit"
+  },
+  "homepage": "https://bravinta.com/opensource/cookkit",
+  "bugs": {
+    "url": "https://github.com/bravinta/cookkit/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/bravinta"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "size": "pnpm run build && size-limit",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@size-limit/preset-big-lib": "^11.1.4",
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "eslint": "^8.57.0",
+    "path": "^0.12.7",
+    "size-limit": "^11.1.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1"
+  }
+}
